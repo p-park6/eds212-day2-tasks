@@ -5,8 +5,6 @@ title: "eds212-day2-tasks"
 ```{r}
 library("tidyverse")
 library("palmerpenguins")
-install.packages("viridis")
-library("viridis")
 ```
 ## Section 3
 ```{r}
@@ -44,4 +42,5 @@ penguin_graph_2 <- ggplot() +geom_jitter(data = penguins, aes(x=species, y = fli
 penguin_graph_2
 ```
 
-
+change 1
+change 2
