@@ -6,4 +6,22 @@ title: "eds212-day2-tasks"
 library("tidyverse")
 library("palmerpenguins")
 ```
+```{r}
+#A
+#f(x)=x^2 at x=3
+fx <- expression(x ^ 2)
+df_dx <- D(fx, 'x')
+df_dx
+x <- 3
+eval(df_dx)
+```
+```{r}
+#B
+#P(a)=2(3a+2)^4−5 at a=1.2
+pa <- expression(2 * (3 * a + 2) ^ 4 - 5)
+df_da <- D (pa, 'a')
+df_da
+a <- 1.2
+eval(df_da)
+```
 
