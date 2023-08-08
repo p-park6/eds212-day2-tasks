@@ -5,7 +5,10 @@ title: "eds212-day2-tasks"
 ```{r}
 library("tidyverse")
 library("palmerpenguins")
+install.packages("viridis")
+library("viridis")
 ```
+## Section 3
 ```{r}
 #A
 #f(x)=x^2 at x=3
@@ -24,4 +27,21 @@ df_da
 a <- 1.2
 eval(df_da)
 ```
+## Section 4
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+#bill length vs bill depth
+penguin_graph <- ggplot() + geom_point(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) + labs(x = "Bill Length(mm)", y = "Bill depth (mm)", title = "Penguin graph")
+penguin_graph
+```
+```{r}
+#jitter plot
+penguin_graph_2 <- ggplot() +geom_jitter(data = penguins, aes(x=species, y = flipper_length_mm, color = species)) +labs(x = "Species", y = "flipper length", title = "Penguin graph 2") + scale_color_viridis_d(begin=0.1,end=0.2)
+penguin_graph_2
+```
+
 
